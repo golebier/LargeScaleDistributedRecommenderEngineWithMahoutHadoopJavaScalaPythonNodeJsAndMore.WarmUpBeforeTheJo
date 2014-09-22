@@ -37,11 +37,15 @@ public class RecommenderIntroTest {
 		// TODO make cleanup
 		Assert.assertNotNull(recommenderIntro);
 
+		// TODO not now or even in this month, but maybe nice display system for outcome?
 	    checkRecomended(recommenderIntro, 1, AMOUNT);
 	    checkRecomended(recommenderIntro, 2, AMOUNT);
 	    checkRecomended(recommenderIntro, 3, AMOUNT);
 	    checkRecomended(recommenderIntro, 4, AMOUNT);
 	    checkRecomended(recommenderIntro, 5, AMOUNT);
+
+	    recommenderIntro.recommend(1, AMOUNT).get(0).getItemID();
+	    recommenderIntro.recommend(1, AMOUNT).get(0).getValue();
 	}
 
 	private void checkRecomended(RecommenderIntro recommenderIntro, int id, int amount) throws Exception {
