@@ -13,6 +13,7 @@
 <!-- TODO evaluate to 0.9 -->
     <mahout.version>0.5</mahout.version>
     <mahout.groupid>org.apache.mahout</mahout.groupid>
+    <spring.version>3.2.10.RELEASE</spring.version>
   </properties>
 
   <url>https://github.com/golebier</url>
@@ -279,6 +280,24 @@
     	<version>2.0.1</version>
     	<type>jar</type>
     	<scope>compile</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>${spring.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.easytesting</groupId>
+        <artifactId>fest-assert</artifactId>
+        <version>1.4</version>
+    </dependency>
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>6.5.2</version>
+        <scope>test</scope>
     </dependency>
   </dependencies>
 
