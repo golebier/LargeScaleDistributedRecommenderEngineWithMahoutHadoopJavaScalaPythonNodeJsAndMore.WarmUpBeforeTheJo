@@ -39,7 +39,7 @@ class RecommenderIntro {
 	}
 
 	public List<RecommendedItem> recommend(int id, int amount) throws Exception {
-		// TODO as fileds, then only id and amount is changed
+		// TODO as fields, then only id and amount is changed
 	    final UserSimilarity similarity = new PearsonCorrelationSimilarity(model);
 	    final UserNeighborhood neighborhood = new NearestNUserNeighborhood(AMOUNT_OF_NEIGHBORS, similarity, model);
 	    final Recommender recommender = new GenericUserBasedRecommender(model, neighborhood, similarity);

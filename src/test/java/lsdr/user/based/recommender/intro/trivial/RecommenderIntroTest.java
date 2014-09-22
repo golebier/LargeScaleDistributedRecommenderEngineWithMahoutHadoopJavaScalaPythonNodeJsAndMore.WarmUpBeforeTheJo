@@ -20,7 +20,7 @@ import org.testng.annotations.Test;
 	    http://www.linkedin.com/pub/rados%C5%82aw-go%C5%82%C4%99biewski/70/832/35
 */
 public class RecommenderIntroTest {
-    private static final int AMOUNT = 3;
+    private static final int AMOUNT = 1;
 	/**
 	 * model read from csv file:
 	 *  1-5 users, first column
@@ -32,7 +32,7 @@ public class RecommenderIntroTest {
 		= "src/test/resources/lsdr/user/based/recommender/intro/trivial/intro.csv";
 
 	@Test
-	public void f() throws Exception {
+	public void readModelAndUseRecomender() throws Exception {
 		RecommenderIntro recommenderIntro = new RecommenderIntro(new FileDataModel(new File(CSV_FILE_PATH)));
 		// TODO make cleanup
 		Assert.assertNotNull(recommenderIntro);
@@ -42,8 +42,6 @@ public class RecommenderIntroTest {
 	    checkRecomended(recommenderIntro, 3, AMOUNT);
 	    checkRecomended(recommenderIntro, 4, AMOUNT);
 	    checkRecomended(recommenderIntro, 5, AMOUNT);
-
-		System.out.println(CSV_FILE_PATH);
 	}
 
 	private void checkRecomended(RecommenderIntro recommenderIntro, int id, int amount) throws Exception {
