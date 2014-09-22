@@ -57,6 +57,4 @@ class IREvaluatorIntro {
 	    		, GenericRecommenderIRStatsEvaluator.CHOOSE_THRESHOLD, 1.0);
 		return stats;
 	}
-//  System.out.println(stats.getPrecision());
-//  System.out.println(stats.getRecall());
 }
